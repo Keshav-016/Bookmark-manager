@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Bookmark Manager",
+  "version": "1.0.0",
+  "permissions": ["storage", "tabs"],
+  "host_permissions": ["https://*.youtube.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["contentScript.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    { "resources": ["assets/bookmark.png"], "matches": ["https://www.youtube.com/*"] }
+  ],
+  "action": {
+    "default_title": "Bookmark Manager",
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  }
+}
