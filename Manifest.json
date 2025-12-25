@@ -18,7 +18,7 @@
   ],
   "action": {
     "default_title": "Bookmark Manager",
-    "default_icon": "icon.png",
+    "default_icon": "assets/icon.png",
     "default_popup": "popup.html"
   }
 }
